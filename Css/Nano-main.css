@@ -83,6 +83,11 @@ ul {
   transition: var(--main-transition);
   cursor: default;
 }
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 20px;
+    }
+}
 .main-title::before,
 .main-title::after {
   content: "";

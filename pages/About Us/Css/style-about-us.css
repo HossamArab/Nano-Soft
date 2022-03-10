@@ -29,11 +29,13 @@ body {
     box-shadow: 0 0 10px #aaa inset;
     width: 15px;
     transition: 3s;
+    position: relative;
 }
 ::-webkit-scrollbar-thumb {
     background-color:#c03a2b6c;
     border-radius: 10px;
     transition: 3s;
+    position: absolute;
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--second-color);
@@ -71,7 +73,7 @@ ul {
 /* popup */
 .main-title {
   text-transform: uppercase;
-  margin: 30px auto 50px;
+  margin: 0 auto 50px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -83,8 +85,7 @@ ul {
 }
 @media (max-width: 768px) {
     .main-title {
-        font-size: 22px;
-        margin-top: 30px;
+        font-size: 20px;
     }
 }
 .main-title::before,
@@ -147,6 +148,12 @@ ul {
         padding: 0;
         color: var(--main-color-alt);
     }
+    @media (max-width: 768px) {
+    .head-address .Home-address,
+    .head-phone .home-phone {
+        font-size: 16px;
+    }
+}
     .header .home-help {
         background-color: var(--color-near-white);
     }
@@ -176,10 +183,10 @@ ul {
     @media (max-width: 768px) {
     .heading-logo a,
     .heading-logo .logos{
-        margin:10px 20%
+        margin:10px 9%
     }
     .heading-logo h1 {
-        font-size: 33px;
+        font-size: 28px;
         flex-wrap: wrap;
         margin: 15px 18%;
     }
@@ -200,6 +207,12 @@ ul {
     width: 100%;
     
 }
+.nav .span-nav {
+    width: 30px;
+    border-bottom: 5px solid var(--second-color);
+    margin: 5px 0;
+    display: none;
+}
 .ul-nav {
     display: flex;
     justify-content: space-between;
@@ -209,6 +222,7 @@ ul {
 }
 .ul-nav li {
     height: 50px;
+    
 }
 .ul-nav li a {
     display: flex;
@@ -224,9 +238,26 @@ ul {
     transition: var(--main-transition);
     overflow: hidden;   
 }
-@media (max-width: 768px) {
+@media (max-width: 350px) {
     .ul-nav li a {
-        font-size: 15px;
+        font-size: 18px;
+        padding: 3px;
+        display: block;
+        border-bottom: 2px solid var(--main-color);
+    }
+    .ul-nav {
+        display:none;
+    }
+    .nav .span-nav {
+        display: block;
+    }
+    .nav .disnav:hover .ul-nav {
+        display: block;
+    }
+}
+@media (maxn-width: 768px) {
+    .ul-nav li a {
+        font-size: 13px;
         padding: 0 3px;
     }
 }
@@ -236,6 +267,7 @@ ul {
         padding: 0 3px;
     }
 }
+
 .ul-nav .Products i {
     color: var(--color-near-white);
     margin: 0 7px 0 0;
