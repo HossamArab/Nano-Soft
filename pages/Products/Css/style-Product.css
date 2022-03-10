@@ -237,7 +237,7 @@ ul {
     transition: var(--main-transition);
     overflow: hidden;   
 }
-@media (max-width: 350px) {
+@media (max-width: 768px) {
     .ul-nav li a {
         font-size: 18px;
         padding: 3px;
@@ -252,12 +252,6 @@ ul {
     }
     .nav .disnav:hover .ul-nav {
         display: block;
-    }
-}
-@media (maxn-width: 768px) {
-    .ul-nav li a {
-        font-size: 13px;
-        padding: 0 3px;
     }
 }
 @media (max-width: 992px) {
