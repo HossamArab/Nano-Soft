@@ -72,7 +72,7 @@ ul {
 /* popup */
 .main-title {
   text-transform: uppercase;
-  margin: 0 auto 50px;
+  margin: 30px auto 50px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -336,6 +336,22 @@ ul {
     position: relative;
     width: 80px;
 }
+@media(max-width: 768px){
+    .main-bransh .facebook i {
+        font-size: 40px;
+    }
+    .main-bransh .whatsapp i {
+        font-size: 40px;
+    }
+    .main-bransh .phone i {
+        font-size: 40px;
+    }
+    .main-bransh .phone{
+        width:40px;
+    }
+
+    
+}
 .main-bransh .phone:hover {
     animation: display 0.5s linear forwards;
 
@@ -362,6 +378,14 @@ ul {
     animation-duration: .5s;
 
 }
+@media (max-width: 768px) {
+    .main-bransh .phone::before{
+        font-size: 25px;
+        top: -12px;
+        margin: 14px 0px;
+        right:40px
+    }
+}
 @keyframes display {
     0%{
         width: 80px;
@@ -369,6 +393,16 @@ ul {
     100% {
         width: 275px;
     }
+}
+@media (max-width: 768px) {
+    @keyframes display {
+    0%{
+        width: 40px;
+    }
+    100% {
+        width: 182px;
+    }
+}
 }
 /* end connect-us   */
 /* start footer  */
