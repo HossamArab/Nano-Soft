@@ -415,7 +415,8 @@ ul {
         font-size: 13px;
     }
     .downfooter .copyright {
-        font-size: 10px;
+        font-size: 14px;
+        letter-spacing: 0;
     }
 }
 /* end footer  */
