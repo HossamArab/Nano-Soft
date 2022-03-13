@@ -72,7 +72,7 @@ ul {
 /* popup */
 .main-title {
   text-transform: uppercase;
-  margin: 0 auto 50px;
+  margin: 30px auto 50px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -303,6 +303,13 @@ ul {
     text-align: center;
     line-height: 1.93;
 }
+@media (max-width: 768px) {
+    .our-services .services {
+        font-size: 20px;
+        color: #333;
+        line-height: 1.6;
+    }
+}
 /* end services  */
 /* start footer  */
 .up-footer {
@@ -382,7 +389,7 @@ ul {
         font-size: 13px;
     }
     .downfooter .copyright {
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 0;
     }
 }

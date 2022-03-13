@@ -72,7 +72,7 @@ ul {
 /* popup */
 .main-title {
   text-transform: uppercase;
-  margin: 0 auto 50px;
+  margin: 30px auto 50px;
   border: 2px solid black;
   padding: 10px 20px;
   font-size: 30px;
@@ -84,7 +84,7 @@ ul {
 }
 @media (max-width: 768px) {
     .main-title {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 .main-title::before,
@@ -415,7 +415,7 @@ ul {
         font-size: 13px;
     }
     .downfooter .copyright {
-        font-size: 14px;
+        font-size: 13px;
         letter-spacing: 0;
     }
 }
