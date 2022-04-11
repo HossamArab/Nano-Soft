@@ -380,8 +380,13 @@ ul {
     cursor: pointer;
 }
 @media (max-width: 768px){
+    .cat-boxes .box {
+        width: 94%;
+        margin-left: 1%;
+        margin-right: 4%;
+    }
     .cat-boxes .box img{
-        height: 105px;
+        height: 100px;
         padding-right: 0px;
         align-items: center;
         transform: translate(-15%, 27%);
@@ -392,9 +397,9 @@ ul {
         font-weight: bold;
     }
     .cat-boxes .box p {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 600;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 }
 /* End category  */
