@@ -322,15 +322,15 @@ ul {
     overflow: hidden;
 }
 .suffle-container > li {
-    width: 31.6666666%;
+    width: 26.6666666%;
     float: left;
     margin-bottom: 35px;
     margin-top: 25px;
-    margin-left: 1%;
+    margin-left: 6%;
     position: relative;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.699);
     border-radius: 20px;
-    transition: all 1s ease-in-out;
+    transition: all var(--main-transition) ease-in-out;
 }
 @media (max-width: 768px) {
     .suffle-container > li {
@@ -343,6 +343,7 @@ ul {
     height: 270px;
     border-radius: 20px;
 }
+
 .suffle-container > li .over {
   position: absolute;
   border-radius: 20px;
@@ -390,6 +391,9 @@ ul {
   animation-name: width;
   animation-duration: 0.75s;
   animation-direction: alternate;
+}
+.suffle-container > li:hover{
+    transform: translate(15px,15px);
 }
 /* end offer */
 /* start footer  */

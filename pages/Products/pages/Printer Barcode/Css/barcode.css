@@ -322,15 +322,15 @@ ul {
     overflow: hidden;
 }
 .suffle-container > li {
-    width: 31.6666666%;
+    width: 26.6666666%;
     float: left;
     margin-bottom: 35px;
     margin-top: 25px;
-    margin-left: 1%;
+    margin-left: 6%;
     position: relative;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.699);
     border-radius: 20px;
-    transition: all 1s ease-in-out;
+    transition: all var(--main-transition) ease-in-out;
 }
 @media (max-width: 768px) {
     .suffle-container > li {
@@ -343,6 +343,7 @@ ul {
     height: 270px;
     border-radius: 20px;
 }
+
 .suffle-container > li .over {
   position: absolute;
   border-radius: 20px;
@@ -352,13 +353,36 @@ ul {
   right: 0;
   width: 0;
   height: 100%;
-  line-height: 270px;
+  /* line-height: 270px; */
   color: #f2f2f2;
   text-align: center;
   font-size: 20px;
   font-weight: bold;
   background-color:rgba(0, 0,0, .6) ;
   display: none;
+}
+.suffle-container > li .over .Model {
+    margin: 0;
+    display: inline-block;
+    align-items: center;
+    position: absolute;
+    padding: 0;
+    cursor: pointer;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.suffle-container > li .over .order-now{
+    display: inline-block;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
 }
 .suffle-container > li:hover .over {
     display: block;
@@ -367,6 +391,9 @@ ul {
   animation-name: width;
   animation-duration: 0.75s;
   animation-direction: alternate;
+}
+.suffle-container > li:hover{
+    transform: translate(15px,15px);
 }
 /* end offer */
 /* start footer  */
