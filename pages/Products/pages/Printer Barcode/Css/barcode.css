@@ -335,7 +335,8 @@ ul {
 @media (max-width: 768px) {
     .suffle-container > li {
         float: none;
-        width: auto;
+        width: 75%;
+        margin: 35px;
     }
 }
 .suffle-container > li img {
