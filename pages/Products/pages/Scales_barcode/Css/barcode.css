@@ -323,15 +323,16 @@ ul {
 }
 .suffle-container > li {
     width: 26.6666666%;
-    float: left;
+    float: Right;
     margin-bottom: 35px;
     margin-top: 25px;
-    margin-left: 6%;
+    margin-right: 6%;
     position: relative;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.699);
     border-radius: 20px;
     transition: all var(--main-transition) ease-in-out;
 }
+
 @media (max-width: 768px) {
     .suffle-container > li {
         float: none;
