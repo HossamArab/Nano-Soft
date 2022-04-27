@@ -303,26 +303,49 @@ ul {
     background-color: var(--color-near-white);
 }
 .cat-boxes {
+    margin-top: 50px;
+    overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     overflow: hidden;
     flex-wrap: wrap;
+    padding-top: 30px;
 
 }
-.cat-boxes .box {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    flex-wrap: nowrap;
+.cat-boxes .card {
     height: 220px;
-    width: 500px;
+    width: 43%;
     background-color: white;
-    margin: 30px 0;
+    margin: 30px 39px;
     border-radius: 20px;
     cursor: pointer;
     position: relative;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.699);
-    transition: var(--main-transition);
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px; */
+    perspective: 1000px;
+    transition: all var(--main-transition) ease-in-out;
+}
+
+.cat-boxes .card .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-wrap: nowrap;    
+}
+.cat-boxes .card .box a {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-wrap: nowrap;    
 }
 .cat-boxes .box::before {
     content: "";
@@ -337,6 +360,7 @@ ul {
 }
 .cat-boxes .box:hover::before {
     left: 0;
+
 }
 .cat-boxes .box::after {
     content: "";
@@ -352,21 +376,22 @@ ul {
 .cat-boxes .box:hover::after {
     right: 0;
 }
-.cat-boxes .box:hover {
-    transform: translate(15px,15px);
+.card:hover .box {
+    /* transform: translate(15px,15px); */
+    transform: translateZ(100px);
 }
-.cat-boxes .box img {
+.cat-boxes .box a img {
     height: 170px;
     padding-right: 25px;
     margin-top: 16px;
     cursor: pointer;
 }
-.cat-boxes .box .words {
+.cat-boxes .box a .words {
     padding-right: 50px;
     padding-left: 20px;
     cursor: pointer;
 }
-.cat-boxes .box h2 {
+.cat-boxes .box a h2 {
     padding-left: 10px;
     font-size: 26px;
     color: var(--main-color);
@@ -380,24 +405,28 @@ ul {
     cursor: pointer;
 }
 @media (max-width: 768px){
-    .cat-boxes .box {
+    .cat-boxes .card {
         width: 94%;
+        height: 180px;
         margin-left: 1%;
         margin-right: 4%;
     }
-    .cat-boxes .box img{
+    .cat-boxes .card .box a img{
         height: 100px;
         padding-right: 0px;
         align-items: center;
         transform: translate(-15%, 27%);
     }
-    .cat-boxes .box h2 {
+    .cat-boxes .card .box a .words {
+        padding: 10px 20px;
+    }
+    .cat-boxes .card .box a h2 {
         padding-left: 5px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
     }
-    .cat-boxes .box p {
-        font-size: 12px;
+    .cat-boxes .card .box a p {
+        font-size: 11px;
         font-weight: 600;
         line-height: 1.7;
     }
