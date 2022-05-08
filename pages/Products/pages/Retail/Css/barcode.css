@@ -86,7 +86,7 @@ ul {
 }
 @media (max-width: 768px) {
     .main-title {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 .main-title::before,
@@ -398,8 +398,8 @@ ul {
     display:block;
     margin: 15px auto;
     color: white;
-    background-color: var(--main-btn-back);
-    border: 4px solid var(--main-btn-back);
+    background-color: var(--main-color-alt);
+    border: 4px solid var(--main-color-alt);
     border-radius: 20px;
     padding: 10px;
     cursor: pointer;
