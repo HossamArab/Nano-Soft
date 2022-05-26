@@ -65,7 +65,21 @@ function showSlidesauto() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlidesauto, 6000); // Change image every 6 seconds
 }
+// slideshow
+// var slideIndextest = 0;
+// showSlidesTest();
 
+// function showSlidesTest() {
+//     var i;
+//     var slides = document.getElementsByClassName("mySlidesTest");
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slideIndextest++;
+//     if (slideIndextest > slides.length) { slideIndextest = 1 }
+//     slides[slideIndextest - 1].style.display = "block";
+//     setTimeout(showSlides, 5000); // Change image every 2 seconds
+// }
 // shuffle
 // Get all buttons with class="btn" inside the container
 var btns = document.getElementsByClassName("filter");
