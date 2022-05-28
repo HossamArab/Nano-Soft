@@ -19,7 +19,46 @@ body {
     direction: rtl;
     scrollbar-base-color: var(--color-near-white);
     scrollbar-color: var(--second-color);
+    background-color: white;
+    color: #2e2e2e;
 }
+.popcont {
+    position: fixed;
+    right: 5px;
+    bottom: 50%;
+    transform: translatey(50%);
+    z-index: 99999999;
+}
+.popcont .popphone {
+    
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
+    
+}
+.popcont i {
+    
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+}
+.popcont .headphone i {
+    color: black;
+}
+.popcont .popwhats i {
+    color: #4caf50;
+}
+.popcont .popface i {
+    color: #1787e0;
+}
+.popcont .popmail i {
+    color: #c0392b;
+}
+
 ::-webkit-scrollbar {
     width: 15px;
     transition: 3s;
@@ -203,7 +242,7 @@ ul {
 /* End header  */
 .nav {
     background-color: var(--main-color-alt);
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 9999;
     width: 100%;
     
@@ -255,6 +294,10 @@ ul {
     .nav .disnav:hover .ul-nav {
         display: block;
     }
+    .sticky {
+        right: 0px;
+        width: 97%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -264,10 +307,49 @@ ul {
     }
 }
 
-.ul-nav .Products i {
+.ul-nav .Products {
     color: var(--color-near-white);
     margin: 0 7px 0 0;
+    position: relative;
 }
+.olol {
+    display: none;
+    position: relative;
+    background-color:  #068dfc;
+    transition: var(--main-transition);
+    z-index: 9999999;
+    height: 245px;
+    width:300px;
+    border-radius: 10px;
+    align-items: center;
+}
+.olol .aololo {
+    position: absolute;
+    align-items: center;
+    
+
+}
+.olol .aololo a{
+    display: block;
+    color: var(--color-near-white);
+    font-size: 18px;
+    width: 299px;
+    font-weight: bold; 
+    text-align: center;
+    line-height: 1.7;
+    margin: 5px auto;
+    border-bottom: 2px solid  var(--color-near-white);
+    padding: 5px 40px;
+}
+.ul-nav .Products:hover .olol {
+    display: block;
+}
+@media (max-width :768px) {
+    .ul-nav .Products:hover .olol{
+        display: none;
+    }
+}
+
 .sticky {
     background-color: #068dfc;
     position: fixed;
@@ -446,6 +528,19 @@ ul {
     font-weight: 600;
     color: #666;
     line-height: 1.7;
+}
+@media (max-width : 768px) {
+    .netw {
+        display: block;
+        margin: auto;
+    }
+    .netw img {
+        width: 250px;
+        margin: 10px 10%;
+    }
+    .netw .serverP {
+        font-size: 14px;
+    }
 }
 /* end networks  */
 /* start category  */
@@ -705,6 +800,25 @@ ul {
     margin: 10px 0;
     
 }
+.up-footer .mapouter {
+    width: 500px;
+    height: 300px;
+    margin: 15px auto;
+}
+.up-footer .mapouter iframe {
+    width: 100%;
+    height: 100%;
+}
+#gmap_canvas{
+    width: 100%;
+    height: 100%;
+}
+    .gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    width: 100%;
+    height: 100%
+}
 .downfooter {
     background-color: var(--main-color);
     height: 50px;
@@ -721,14 +835,37 @@ ul {
     line-height: 50px;
 }
 @media (max-width: 768px) {
+    .up-footer .container {
+        display: block;
+    }
+    .up-footer .aboutus,
+    .up-footer .followus{
+        margin: auto;
+        width: 100%;
+        align-items: center;
+    }
+    .up-footer .mapouter {
+        width: 300px;
+        height: 200px;
+        margin: 15px auto;
+    }
+    .up-footer .mapouter iframe {
+        width: 100%;
+        height: 100%;
+    }
+    #gmap_canvas{
+        width: 100%;
+        height: 100%;
+    }
     .up-footer .aboutus p {
         font-size: 13px;
+        
     }
     .up-footer .followus a {
         font-size: 13px;
     }
     .downfooter .copyright {
-        font-size: 13px;
+        font-size: 12px;
         letter-spacing: 0;
     }
 }
@@ -812,6 +949,15 @@ ul {
     font-weight: bold;
     color: #555;
 }
+.main-bransh .mapouter {
+    margin: 20px auto;
+    width: 600px;
+    height: 400px;
+}
+.main-bransh .mapouter .gmap_canvas {
+    width: 100%;
+    height: 100%;
+}
 .flex-cont {
     display: flex;
     flex-wrap: nowrap;
@@ -850,18 +996,25 @@ ul {
     .main-bransh .phone{
         width:40px;
     }
-
+    .main-bransh .mapouter{
+        width: 250px;
+        height: 100px;
+    }
+    .main-bransh .mapouter .gmap_canvas {
+        width: 100%;
+        height: 100%;
+    }
     
 }
-.main-bransh .phone:hover {
+/* .main-bransh .phone:hover {
     animation: display 0.5s linear forwards;
 
-}
+} */
 .main-bransh .phone i {    
     color: #555;
     cursor: pointer;
 }
-.main-bransh .phone::before {
+/* .main-bransh .phone::before {
     position: absolute;
     content: "01014005493";
     font-size: 33px;
@@ -869,7 +1022,7 @@ ul {
     color: #555;
     margin: 14px;
     opacity: 1;
-    /* width: 0; */
+    width: 0;
     transition: var(--main-transition);
     top: 7px;
     right: 73px
@@ -878,19 +1031,19 @@ ul {
     animation-name: dispaly;
     animation-duration: .5s;
 
-}
+} */
 .mapouter{
-    margin: 20px auto;
+    margin: auto;
 }
 @media (max-width: 768px) {
-    .main-bransh .phone::before{
+    /* .main-bransh .phone::before{
         font-size: 25px;
         top: -12px;
         margin: 14px 0px;
         right:40px
-    }
+    } */
 }
-@keyframes display {
+/* @keyframes display {
     0%{
         width: 80px;
     }
@@ -907,7 +1060,7 @@ ul {
         width: 182px;
     }
 }
-}
+} */
 /* end connect-us   */
 /* start services  */
 .our-services .services {
