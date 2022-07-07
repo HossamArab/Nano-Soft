@@ -27,7 +27,7 @@ body {
     right: 5px;
     bottom: 50%;
     transform: translatey(50%);
-    z-index: 99999999;
+    z-index: 8;
 }
 .popcont .popphone {
     
@@ -243,7 +243,7 @@ ul {
 .nav {
     background-color: var(--main-color-alt);
     /* overflow: hidden; */
-    z-index: 9999;
+    z-index: 999999999999999999999;
     width: 100%;
     
 }
@@ -528,6 +528,7 @@ ul {
     font-weight: 600;
     color: #666;
     line-height: 1.7;
+    margin: 25px;
 }
 @media (max-width : 768px) {
     .netw {
@@ -632,6 +633,7 @@ ul {
     padding-right: 25px;
     margin-top: 16px;
     cursor: pointer;
+    width: 170px;
 }
 .cat-boxes .box a .words {
     padding-right: 50px;
@@ -733,7 +735,7 @@ ul {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  background-color:rgba(23, 135, 224, .6) ;
+  background-color:rgba(0, 0, 0, .6) ;
   display: none;
 }
 .suffle-container > li:hover .over {
@@ -935,7 +937,7 @@ ul {
 /* Connect US  */
 /* start connect-us   */
 .main-bransh{
-    margin-bottom: 40px;
+    margin-bottom: 100px;
 }
 .main-bransh .frist {
     text-align: center;
