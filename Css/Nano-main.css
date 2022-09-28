@@ -28,6 +28,8 @@ body {
     bottom: 50%;
     transform: translatey(50%);
     z-index: 8;
+    align-content: center;
+    justify-content: center;
 }
 .popcont .popphone {
     
@@ -41,7 +43,6 @@ body {
     
 }
 .popcont i {
-    
     align-items: center;
     text-align: center;
     line-height: 50px;
@@ -629,11 +630,11 @@ ul {
     transform: translateZ(100px);
 }
 .cat-boxes .box a img {
-    height: 170px;
+    height: 155px;
     padding-right: 25px;
     margin-top: 16px;
     cursor: pointer;
-    width: 170px;
+    width: 155px;
 }
 .cat-boxes .box a .words {
     padding-right: 50px;
@@ -662,6 +663,7 @@ ul {
     }
     .cat-boxes .card .box a img{
         height: 100px;
+        width: 100px;
         padding-right: 0px;
         align-items: center;
         transform: translate(-15%, 27%);
@@ -1141,6 +1143,7 @@ ul {
     width: 100%;
     height: 230px;
     border-radius: 20px;
+    cursor: pointer;
 }
 .suffle-container  li .Card {
     position: relative;
@@ -1151,6 +1154,7 @@ ul {
     border-radius: 20px;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 .suffle-container > li .Card .Model {
     margin: 10px auto;
@@ -1285,3 +1289,119 @@ ul {
   }
 }
 /* animation list end */
+/* start Items */
+.detalis{
+    margin: 50px auto;
+}
+.item{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: stretch;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.item .item_image .item_img{
+    height: 352px;
+}
+.item .item_des {
+    text-align: center;
+}
+.item .item_des .item_name {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--main-color-alt);
+    padding: 10px;
+    margin-top: 0;
+}
+.item .item_des .item_Detalis {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #666;
+}
+/* End Items */
+/* start popup detalis  */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999999999999999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 10px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+.modal-content iframe {
+    margin: 10px 0 40px;
+}
+.tables {
+    margin: 60px auto;
+}
+.tbl{
+    width: 100%;
+    border-spacing: 0;
+}
+tr {
+    display: table-row;
+    border-radius: 5px;
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+td:first-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+td:nth-child(2){
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.tbl_btn{
+    align-items: center;
+    text-align: center;
+    margin-left: -5px;
+}
+.titles{
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+.tbl_btn .popbtn {
+    margin: 15px auto;
+    color: white;
+    background-color: var(--main-color-alt);
+    border: 4px solid var(--main-color-alt);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+/* The Close Button */
+.close {
+    display: block;
+  color: #aaa;
+  /* float: right; */
+  font-size: 38px;
+  font-weight: bold;
+  padding-right: 15px;
+  /* top: 20px; */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* End popup detalis  */
