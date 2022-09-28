@@ -268,20 +268,19 @@ ul {
 .ul-nav li a {
     display: flex;
     justify-content: center;
-    color: var(--color-near-white);
-    font-size: 22px;
+    color: black;
+    font-size: 18px;
     font-weight: bold; 
     line-height: 50px;
     align-items: center;
     position: relative;
-    color: var(--color-near-white);
     padding: 0 30px;
     transition: var(--main-transition);
     overflow: hidden;   
 }
 @media (max-width: 768px) {
     .ul-nav li a {
-        font-size: 18px;
+        font-size: 14px;
         padding: 3px;
         display: block;
         border-bottom: 2px solid var(--main-color);
@@ -319,8 +318,8 @@ ul {
     background-color:  #068dfc;
     transition: var(--main-transition);
     z-index: 9999999;
-    height: 245px;
-    width:300px;
+    height: 246px;
+    width:132px;
     border-radius: 10px;
     align-items: center;
 }
@@ -332,15 +331,22 @@ ul {
 }
 .olol .aololo a{
     display: block;
-    color: var(--color-near-white);
-    font-size: 18px;
-    width: 299px;
-    font-weight: bold; 
+    color: black;
+    font-size: 16px;
+    width: 131px;
+    font-weight: bold;
     text-align: center;
-    line-height: 1.7;
-    margin: 5px auto;
-    border-bottom: 2px solid  var(--color-near-white);
-    padding: 5px 40px;
+    align-content: center;
+    line-height: 1.6;
+    margin: 11px auto;
+    border-bottom: 2px solid var(--color-near-white);
+    padding: 0px 0 11px;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: var(--main-transition);
+}
+.olol .aololo a:hover {
+    opacity: 1;
 }
 .ul-nav .Products:hover .olol {
     display: block;
@@ -356,12 +362,9 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
-    color: white;
     transition: var(--main-transition);
 }
-.sticky .ul-nav li a {
-    color: white;
-}
+
 .ul-nav li a::before {
     content: "";
     position: absolute;
@@ -374,7 +377,7 @@ ul {
 }
 
 .ul-nav > li > a:hover {
-    color: var(--main-color);
+    /* color: var(--main-color); */
     background-color: #0b8bf38c;
 }
 .ul-nav > li > a:hover::before {
@@ -1148,13 +1151,14 @@ ul {
 .suffle-container  li .Card {
     position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     transition: transform 0.8s;
     transform-style: preserve-3d;
     cursor: pointer;
+    padding-bottom: 2px; 
 }
 .suffle-container > li .Card .Model {
     margin: 10px auto;
@@ -1291,7 +1295,7 @@ ul {
 /* animation list end */
 /* start Items */
 .detalis{
-    margin: 50px auto;
+    margin: 30px auto;
 }
 .item{
     display: grid;
@@ -1299,9 +1303,20 @@ ul {
     justify-content: stretch;
     overflow: hidden;
     flex-wrap: wrap;
+    text-align: center;
+    align-content: center;
+    height: 500px;
+}
+.item .item_image{
+    transition: 0.5s;
 }
 .item .item_image .item_img{
     height: 352px;
+    max-width: 352px;
+    transition: 0.5s;
+}
+.item .item_image:hover .item_img {
+    transform: scale(1.4);
 }
 .item .item_des {
     text-align: center;
@@ -1346,7 +1361,7 @@ ul {
     margin: 10px 0 40px;
 }
 .tables {
-    margin: 60px auto;
+    margin: 20px auto;
 }
 .tbl{
     width: 100%;
