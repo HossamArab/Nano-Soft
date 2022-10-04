@@ -65,21 +65,7 @@ function showSlidesauto() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlidesauto, 6000); // Change image every 6 seconds
 }
-// slideshow
-// var slideIndextest = 0;
-// showSlidesTest();
 
-// function showSlidesTest() {
-//     var i;
-//     var slides = document.getElementsByClassName("mySlidesTest");
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     slideIndextest++;
-//     if (slideIndextest > slides.length) { slideIndextest = 1 }
-//     slides[slideIndextest - 1].style.display = "block";
-//     setTimeout(showSlides, 5000); // Change image every 2 seconds
-// }
 // shuffle
 // Get all buttons with class="btn" inside the container
 var btns = document.getElementsByClassName("filter");
@@ -93,3 +79,17 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 var mixer = mixitup('.suffle-container');
+
+//JS Swiper
+const wrapper = document.querySelector(".wrapper-cat");
+const buttons = document.querySelectorAll(".btns-cat > span");
+
+const back = buttons[0];
+const forward = buttons[1];
+
+back.onclick = function() {
+  wrapper.appendChild(wrapper.firstElementChild);
+};
+forward.onclick = function() {
+  wrapper.insertBefore(wrapper.lastElementChild, wrapper.firstElementChild);
+};

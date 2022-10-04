@@ -19,8 +19,9 @@ body {
     direction: rtl;
     scrollbar-base-color: var(--color-near-white);
     scrollbar-color: var(--second-color);
-    background-color: white;
+    background-color: var(--color-near-white);
     color: #2e2e2e;
+    overflow-x: hidden;
 }
 .popcont {
     position: fixed;
@@ -94,6 +95,7 @@ ul {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 @media (min-width: 768px) {
     .container {
@@ -203,6 +205,7 @@ ul {
         justify-content: flex-start;
         
     }
+    
     .heading-logo {
         display: flex;
         justify-content: space-between;
@@ -243,7 +246,6 @@ ul {
 /* End header  */
 .nav {
     background-color: var(--main-color-alt);
-    /* overflow: hidden; */
     z-index: 999999999999999999999;
     width: 100%;
     
@@ -377,7 +379,6 @@ ul {
 }
 
 .ul-nav > li > a:hover {
-    /* color: var(--main-color); */
     background-color: #0b8bf38c;
 }
 .ul-nav > li > a:hover::before {
@@ -550,10 +551,12 @@ ul {
 /* end networks  */
 /* start category  */
 .category {
-    
-    padding-top: 30px;
-    background-color: var(--color-near-white);
+    height: auto;
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
 }
+
 .cat-boxes {
     margin-top: 50px;
     overflow: hidden;
@@ -572,8 +575,6 @@ ul {
     border-radius: 20px;
     cursor: pointer;
     position: relative;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 20px; */
     perspective: 1000px;
     transition: all var(--main-transition) ease-in-out;
 }
@@ -629,7 +630,6 @@ ul {
     right: 0;
 }
 .card:hover .box {
-    /* transform: translate(15px,15px); */
     transform: translateZ(100px);
 }
 .cat-boxes .box a img {
@@ -1013,61 +1013,14 @@ ul {
     }
     
 }
-/* .main-bransh .phone:hover {
-    animation: display 0.5s linear forwards;
 
-} */
 .main-bransh .phone i {    
     color: #555;
     cursor: pointer;
 }
-/* .main-bransh .phone::before {
-    position: absolute;
-    content: "01014005493";
-    font-size: 33px;
-    font-weight: bold;
-    color: #555;
-    margin: 14px;
-    opacity: 1;
-    width: 0;
-    transition: var(--main-transition);
-    top: 7px;
-    right: 73px
-}
-.flex-cont .phone i:hover .home-phone {
-    animation-name: dispaly;
-    animation-duration: .5s;
-
-} */
 .mapouter{
     margin: auto;
 }
-@media (max-width: 768px) {
-    /* .main-bransh .phone::before{
-        font-size: 25px;
-        top: -12px;
-        margin: 14px 0px;
-        right:40px
-    } */
-}
-/* @keyframes display {
-    0%{
-        width: 80px;
-    }
-    100% {
-        width: 275px;
-    }
-}
-@media (max-width: 768px) {
-    @keyframes display {
-    0%{
-        width: 40px;
-    }
-    100% {
-        width: 182px;
-    }
-}
-} */
 /* end connect-us   */
 /* start services  */
 .our-services .services {
@@ -1118,14 +1071,11 @@ ul {
 .suffle-container > li {
     width: 26.6666666%;
     max-height: 555px;
-    /* float: Right; */
     margin-bottom: 45px;
     margin-top: 35px;
     margin-right: 3%;
     margin-left: 3%;
     position: relative;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 20px; */
     perspective: 1000px;
     transition: all var(--main-transition) ease-in-out;
     
@@ -1151,7 +1101,6 @@ ul {
 .suffle-container  li .Card {
     position: relative;
     width: 100%;
-    /* height: 100%; */
     text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -1181,7 +1130,6 @@ ul {
     font-size: 14px;
     line-height: 1.6;
     color: #666;
-    /* transition: var(--main-transition); */
     height: 200px;
     overflow: hidden;
 }
@@ -1196,13 +1144,6 @@ ul {
     cursor: pointer;
     align-items: center;
 }
-/* .suffle-container > li:hover .Des {
-    height: 154px;
-    transition: 1.5s;
-} */
-/* .suffle-container > li:hover{
-    transform: translateY(-40px);
-} */
 .suffle-container  li:hover .Card {
     transform: translateZ(100px)
 }
@@ -1406,13 +1347,10 @@ td:nth-child(2){
 .close {
     display: block;
   color: #aaa;
-  /* float: right; */
   font-size: 38px;
   font-weight: bold;
   padding-right: 15px;
-  /* top: 20px; */
 }
-
 .close:hover,
 .close:focus {
   color: black;
@@ -1420,3 +1358,205 @@ td:nth-child(2){
   cursor: pointer;
 }
 /* End popup detalis  */
+/* other slider */
+.wrapper-cat {
+    position: relative;
+    width: 100%;
+    height: 61vh;
+    overflow: hidden;
+}
+.category .container::before {
+    position: absolute;
+    content: '';
+    background: inherit;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 3000px rgba(180, 180, 180, 0.50);
+    filter: blur(10px);
+    border-radius: 15px;
+    z-index: -1;
+}
+.box-cat {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 500ms ease-in-out 100ms;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.box-cat .test-cat {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.box-cat .test-cat .img-cat {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.box-cat .test-cat .over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    line-height: 250px;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+}
+
+.box-cat .test-cat:hover .over {
+    display: block;
+    width: 100%;
+    transition: all 1s ease-in-out;
+    animation-name: width;
+    animation-duration: 0.75s;
+    animation-direction: alternate;
+}
+
+.box-cat .test-cat .para-cat {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+
+.box-cat:nth-of-type(1) {
+    transform: translate3d(-190%, -50%, -100px) scale(0.0);
+    z-index: 1;
+}
+
+.box-cat:nth-of-type(2) {
+    transform: translate3d(-190%, -50%, -100px) scale(0.0);
+        z-index: 1;
+}
+
+.box-cat:nth-of-type(3) {
+    transform: translate3d(-190%, -50%, -100px) scale(0.0);
+        z-index: 1;
+}
+
+.box-cat:nth-of-type(4) {
+    transform: translate3d(-190%, -50%, -100px) scale(0.0);
+        z-index: 1;
+}
+
+.box-cat:nth-of-type(5) {
+    transform: translate3d(-190%, -50%, -100px) scale(0.6);
+        z-index: 2;
+}
+
+.box-cat:nth-of-type(6) {
+    transform: translate3d(-130%, -50%, -100px) scale(0.8);
+        z-index: 3;
+}
+
+.box-cat:nth-of-type(7) {
+    z-index: 4;
+}
+
+.box-cat:nth-of-type(8) {
+    transform: translate3d(30%, -50%, -100px) scale(0.8);
+    z-index: 3;
+}
+.box-cat:nth-of-type(9) {
+    transform: translate3d(90%, -50%, -100px) scale(0.6);
+    z-index: 2;
+}
+.box-cat:nth-of-type(11) {
+    transform: translate3d(90%, -50%, -100px) scale(0.0);
+    z-index: 1;
+}
+.box-cat:nth-of-type(12) {
+    transform: translate3d(90%, -50%, -100px) scale(0.0);
+    z-index: 1;
+}
+.box-cat:nth-of-type(13) {
+    transform: translate3d(90%, -50%, -100px) scale(0.0);
+    z-index: 1;
+}
+.box-cat:nth-of-type(14) {
+    transform: translate3d(90%, -50%, -100px) scale(0.0);
+    z-index: 1;
+}
+.box-cat:nth-of-type(15) {
+    transform: translate3d(90%, -50%, -100px) scale(0.0);
+    z-index: 1;
+}
+
+.btns-cat {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns-cat>span {
+    margin: 10px 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #22429286;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 99;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 900ms;
+    transition-timing-function: ease-in-out;
+}
+
+.btns-cat>span:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+.btns-cat>span:hover {
+    background-color: #224292;
+}
+
+.btns-cat>span>i {
+    color: #fff;
+}
+@media (max-width: 768px){
+    .box-cat {
+            width: 150px;
+            height: 150px;
+    }
+    .box-cat .test-cat .img-cat{
+            width: 150px;
+            height: 150px;
+        }
+        .box-cat .test-cat .over {
+            width: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            display: block;
+            line-height: 130px;
+        }
+        .box-cat .test-cat .para-cat {
+            font-size: 18px;
+        }
+}
