@@ -320,7 +320,7 @@ ul {
     background-color:  #068dfc;
     transition: var(--main-transition);
     z-index: 9999999;
-    height: 246px;
+    height: 85vh;
     width:132px;
     border-radius: 10px;
     align-items: center;
@@ -334,7 +334,7 @@ ul {
 .olol .aololo a{
     display: block;
     color: black;
-    font-size: 16px;
+    font-size: 15px;
     width: 131px;
     font-weight: bold;
     text-align: center;
