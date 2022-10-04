@@ -48,6 +48,16 @@ body {
     text-align: center;
     line-height: 50px;
 }
+@media (max-width: 768px){
+    .popcont .popphone {
+        width: 30px;
+        height: 30px;
+    }
+        .popcont i {
+            line-height: 30px;
+            font-size: 18px;
+        }
+}
 .popcont .headphone i {
     color: black;
 }
