@@ -330,7 +330,7 @@ ul {
     background-color:  #068dfc;
     transition: var(--main-transition);
     z-index: 9999999;
-    height: 85vh;
+    height: 1345%;
     width:132px;
     border-radius: 10px;
     align-items: center;
