@@ -1285,6 +1285,29 @@ ul {
     line-height: 1.7;
     color: #666;
 }
+@media (max-width: 768px) {
+    .item {
+            display: block;
+        }
+        .item .item_image .item_img {
+            height: 152px;
+            max-width: 152px;
+        }    
+        .item .item_des .item_name {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    
+        .item .item_des .item_Detalis {
+            font-size: 15px;
+        }
+        .titles {
+            font-size: 14px !important; 
+        }
+        .tbl_btn .popbtn {
+            font-size: 14px !important;  
+        }
+}
 /* End Items */
 /* start popup detalis  */
 .modal {
