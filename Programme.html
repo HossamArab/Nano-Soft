@@ -58,6 +58,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- الإعدادات -->
+        <div class="settings-box">
+            <div class="toggle-settings">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="settings-container">
+                <div class="option-box">
+                    <h4>ألوان الموقع</h4>
+                    <ul class="colors-list">
+                        <li class="active" data-color="#224292"></li>
+                        <li data-color="#f44036"></li>
+                        <li data-color="#009688"></li>
+                        <li data-color="#673ab7"></li>
+                        <li data-color="#03A9F4"></li>
+                    </ul>
+                </div>
+                <a class="weatherwidget-io" href="https://forecast7.com/ar/30d0431d24/cairo/" data-label_1="CAIRO"
+                    data-label_2="WEATHER" data-theme="original">CAIRO WEATHER</a>
+                <script>
+                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                </script>
+            </div>
+        </div>
+        <!-- أخر الإعدادات -->
         <div class="popcont">
             <div class="popphone headphone">
                 <a href="tel:+201029414265">
@@ -85,71 +109,74 @@
                 </a>
             </div>
         </div>
-        <!-- Start header and nav  -->
-        <div class="header">
-            <div class="home-help">
-                <div class="container">
-                    <div class="head-address">
-                        <a href="connectus.html">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p class="Home-address">أبحث عن أقرب فرع لك </p>
-                        </a>
-                    </div>
-                    <div class="head-phone">
-                        <a href="tel:+201029414265">
-                            <i class="fas fa-phone"></i>
-                            <p class="home-phone">01029414265</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="header" id="header">
             <div class="container">
-                <div class="heading-logo">
-                    <a href="https://nanosoftcode.com" class="home-reload">
-                        <img src="img/logo.png" alt="Nano-Soft-logo" class="logo-nano">
-                    </a>
-                    <h1 class="company">نانو سوفت كود</h1>
-                    <img src="img/logos.png" alt="" class="logos">
-                </div>
-            </div>
-        </div>
-        <div class="nav" id="navbar">
-            <div class="container">
-                <nav class="disnav">
-                    <span class="span-nav"></span>
-                    <span class="span-nav"></span>
-                    <span class="span-nav"></span>
-                    <ul class="ul-nav">
-                        <li class="Main-page"><a href="https://nanosoftcode.com">الرئيسية</a></li>
-                        <li class="About-Us"><a href="aboutus.html">عن الشركة</a></li>
-                        <li class="Contact-Us"><a href="connectus.html">الإتصال بنا</a></li>
-                        <li class="Our Services" ><a href="ourservices.html">خدماتنا</a></li>
-                        <li class="Products" >
-                            <a href="products.html">المنتجات</a>
-                            <div class="olol">
-                                <div class="aololo">
-                                    <a class="olprograme" href="Programme.html">برامج الحسابات</a>
-                                    <a class="olretail" href="Retail.html">أجهزة الكاشير</a>
-                                    <a class="olRest" href="Rest.html">معدات و قطاعات</a></ol>
-                                    <a class="olBarcode" href="Scales_barcode.html">موازين باركود</a>
-                                    <a class="olBascol" href="Bascol.html">موازين الشاحنات</a>
-                                    <a class="otroll" href="troll.html">سلات تسوق</a>
-                                    <a class="oscanner" href="scanner.html">قارئ باركود</a>
-                                    <a class="oRecipteprinter" href="Recipteprinter.html">طابعات فواتير</a>
-                                    <a class="oBarcodeprinter" href="Barcodeprinter.html">طابعات باركود</a>
-                                    <a class="ocashdraw" href="cashdraw.html">درج نقدية</a>
-                                    <a class="onetworks" href="network.html">شبكات</a>
-                                    <a class="ostaires" href="staires.html">سلالم</a>
-                                    <a class="oscales" href="scales.html">موازين</a>
-                                    <a class="oRolls" href="Rolls.html">بكر و استرتش</a>
-                                </div>
+                <a href="https://nanosoftcode.com" class="logo">نانو سوفت كود </a>
+                <ul class="main-nav">
+                    <li><a href="aboutus.html">من نحن</a></li>
+                    <li><a href="ourservices.html">خدماتنا</a></li>
+                    <li><a href="connectus.html">الإتصال</a></li>
+                    <li><a href="Testmonial.html">العملاء</a></li>
+                    <li>
+                        <a href="#">المنتجات</a>
+                        <!-- Start Megamenu -->
+                        <div class="mega-menu">
+                            <div class="image">
+                                <img src="img/megamenu.png" alt="" />
                             </div>
-                        </li>
-                        <li class="Testmonial" ><a href="Testmonial.html">العملاء</a></li>
-                    </ul>
-                    
-                </nav>
-                
+                            <ul class="links">
+                                <li>
+                                    <a href="products.html"><i class="fas fa-list fa-fw"></i> كل المنتجات</a>
+                                </li>
+                                <li>
+                                    <a href="Programme.html"><i class="fas fa-code fa-fw"></i> برامج حسابات</a>
+                                </li>
+                                <li>
+                                    <a href="network.html"><i class="far fa-user fa-fw"></i> شبكات</a>
+                                </li>
+                                <li>
+                                    <a href="Retail.html"><i class="fas fa-laptop fa-fw"></i> أجهزة كاشير</a>
+                                </li>
+                                <li>
+                                    <a href="Scales_barcode.html"><i class="fas fa-barcode fa-fw"></i>موازين باركود</a>
+                                </li>
+                                <li>
+                                    <a href="Recipteprinter.html"><i class="fas fa-money-bill fa-fw"></i>طابعات فواتير</a>
+                                </li>
+                                <li>
+                                    <a href="Barcodeprinter.html"><i class="far fa-calendar fa-fw"></i>طابعات باركود</a>
+                                </li>
+                                <li>
+                                    <a href="scanner.html"><i class="fas fa-server fa-fw"></i>قارئ باركود </a>
+                                </li>
+                            </ul>
+                            <ul class="links">
+                                <li>
+                                    <a href="cashdraw.html"><i class="fas fa-desktop fa-fw"></i> درج نقدية </a>
+                                </li>
+                                <li>
+                                    <a href="Rolls.html"><i class="fas fa-paper-plane fa-fw"></i> بكر استرتش</a>
+                                </li>
+                                <li>
+                                    <a href="Rest.html"><i class="far fa-play-circle fa-fw"></i> معدات و قطاعات</a>
+                                </li>
+                                <li>
+                                    <a href="troll.html"><i class="fas fa-shopping-cart fa-fw"></i> سلات تسوق</a>
+                                </li>
+                                <li>
+                                    <a href="scales.html"><i class="fas fa-weight fa-fw"></i> موازين</a>
+                                </li>
+                                <li>
+                                    <a href="Bascol.html"><i class="fas fa-truck fa-fw"></i> موازين بيسكول</a>
+                                </li>
+                                <li>
+                                    <a href="staires.html"><i class="fas fa-upload fa-fw"></i> سلالم</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Megamenu -->
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- End header and nav  -->
@@ -171,9 +198,9 @@
                                     <h3 class="Model">
                                         برنامج الأوكتاجون
                                     </h3>
-                                    <button class="order-now">
-                                        المزيد
-                                    </button>
+                                    <div class="info">
+                                التفاصيل
+                            </div>
                                 </a>
                             </div>
                         </div>
@@ -184,36 +211,90 @@
         <!-- end Shuffle  -->
 
         <!-- start footer  -->
-        <div class="up-footer">
+        <div class="footer">
             <div class="container">
-                <div class="aboutus">
-                    <h2>من نحن</h2>
-                    <p>متخصصون في مجال أنظمة البيع و الكاشير و تجهيز المحلات و السوبر ماركت و المطاعم لسنا الاولون و لكننا متميزون. متميزون بخدمة ما بعد البيع نوفر لك فريق عمل على أعلي مستوى لحل جميع المشكلات و الاستفسارات. نشئنا لتوفير الوقت و الجهد نشئنا لتقليص المسافات نشئنا لتقريب البعيد نقدم الأفضل لك شعارنا أنت نمبر ون</p>
+                <div class="box">
+                    <h3>نانو سوفت كود</h3>
+                    <ul class="social">
+                        <li>
+                            <a href="https://www.facebook.com/Nano.soft.code.Barcode/" class="facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="youtube" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/nano-soft-code/" class="linkedin" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+201029414265/" class="whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="textf">
+                        شركة نانو سوفت كود هي شركة رائدة في مجال تركيب و صيانة الشبكات و تجهيز السوبر ماركت و المطاعم و الفنادق
+                    </p>
                 </div>
-                <div class="followus">
-                    <h2>تابعونا</h2>
-                    <a href="https://www.facebook.com/Nano.soft.code.Barcode/" target="_blank"><i class="fab fa-facebook"></i> صفحتنا على الفيس بوك</a>
-                    <div class="whatsapp">
-                        <a href="https://wa.me/+201029414265/" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        <p>01029414265</p>
-                        </a>
+                <div class="box">
+                    <ul class="links">
+                        <li><a href="network.html">أجهزة الشبكات</a></li>
+                        <li><a href="Retail.html">أجهزة الكومبيوتر</a></li>
+                        <li><a href="Scales_barcode.html">موازين باركود</a></li>
+                        <li><a href="Recipteprinter.html">طابعات الفواتير</a></li>
+                        <li><a href="Rest.html">معدات و قطاعات</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="line">
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        <div class="info">طريق النصر, بجوار نيابة الوايلي, مدينة نصر, القاهرة</div>
                     </div>
-                    <div class="phone">
-                        <a href="tel:+201029414265">
-                            <i class="fas fa-phone"></i>
-                            <p class="home-phone">01029414265</p>
-                        </a>
+                    <div class="line">
+                        <i class="far fa-clock fa-fw"></i>
+                        <div class="info">ساعات العمل من 10:00 حتى 17:00</div>
+                    </div>
+                    <div class="line">
+                        <i class="fas fa-phone-volume fa-fw"></i>
+                        <div class="info">
+                            <span>+201029414265</span>
+                            <span>+20223423316</span>
+                        </div>
                     </div>
                 </div>
-                <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=%D9%86%D9%8A%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D9%88%D8%A7%D9%8A%D9%84%D9%8A%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A6%D9%8A%D8%A9&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;}</style></div></div>
+                <div class="box footer-gallery">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=%D9%86%D9%8A%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D9%88%D8%A7%D9%8A%D9%84%D9%8A%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A6%D9%8A%D8%A9&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                                href="https://fmovies-online.net"></a><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                }
+                            </style><a href="https://www.embedgooglemap.net"></a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                }
+                            </style>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="downfooter">
-            <div class="container">
-                <div class="copyright">Copyright &copy; 2022 All Right Reserved for Nano Soft Code</div>
-            </div>
+            <p class="copyright">Copyright &copy; 2022 All Right Reserved for Nano Soft Code</p>
         </div>
         <!-- end footer  -->
         <script src="js/mixitup.min.js"></script>
