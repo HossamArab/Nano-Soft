@@ -1044,6 +1044,24 @@ ul {
     width:100%
   }
 }
+@keyframes backgrounds{
+    0%,
+    100%{
+        background-image: url("../img/Networks.jpg");
+    }
+    20%{
+        background-image: url("../img/Factory.jpg");
+    }
+    40%{
+        background-image: url("../img/company.jpg");
+    }
+    60%{
+        background-image: url("../img/market.jpg");
+    }
+    80%{
+        background-image: url("../img/resturant.jpg");
+    }
+}
 /* animation list end */
 /* start Items */
 .detalis{
@@ -1081,7 +1099,7 @@ ul {
     margin-top: 0;
 }
 .item .item_des .item_Detalis {
-    font-size: 1em;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.7;
     color: #666;
@@ -1100,7 +1118,7 @@ ul {
         }
     
         .item .item_des .item_Detalis {
-            font-size: 15px;
+            font-size: 16px;
         }
         .titles {
             font-size: 14px !important; 
@@ -1932,3 +1950,62 @@ td:nth-child(2){
     cursor: pointer;
 }
 /* End settings */
+#cimgtop {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 1s ease-in-out;
+    animation-name: backgrounds;
+    animation-duration: 25s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    margin-top: 50px;
+}
+
+/* Expanding image text */
+#expandedImg {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+#imgtext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    background-color: #00000071;
+    color: #eee;
+    font-size: 35px;
+    width: 50%;
+    font-weight: 700;
+}
+#cimgtop .over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+}
+@media (max-width: 767px) {
+    #expandedImg {
+            width: 65%;
+            right: 0;
+        }
+    
+        #imgtext {
+            position: absolute;
+            left: 5px;
+            font-size: 16px;
+            width: 45%;
+            font-weight: 400;
+        }
+}

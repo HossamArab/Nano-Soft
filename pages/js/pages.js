@@ -1,3 +1,12 @@
+var imgstop = document.getElementById("imgstop");
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+myFunction(imgstop);
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
