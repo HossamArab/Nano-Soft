@@ -1917,6 +1917,21 @@ td:nth-child(2){
 .settings-box .option-box .colors-list li:nth-child(5) {
     background-color: #03A9F4;
 }
+.settings-box .option-box .colors-list li:nth-child(6) {
+    background-color: #cf151f;
+}
+.settings-box .option-box .colors-list li:nth-child(7) {
+    background-color: #0d6732;
+}
+.settings-box .option-box .colors-list li:nth-child(8) {
+    background-color: #1c2130;
+}
+.settings-box .option-box .colors-list li:nth-child(9) {
+    background-color: #f67704;
+}
+.settings-box .option-box .colors-list li:nth-child(10) {
+    background-color: #300030;
+}
 
 .settings-box .option-box .yes,
 .settings-box .option-box .no {
